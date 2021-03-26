@@ -1,6 +1,6 @@
 const authService = require('../services/auth.service');
 
-const authenticateJwt = (req, res, next) => {
+const authenticateJwt = async (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (authHeader) {
     const jwtToken = authHeader.split(' ')[1];
